@@ -1,0 +1,31 @@
+[project]
+name = "rednote_studio"
+version = "0.1.0"
+description = "Python uv project for Rednote video generation workflows."
+readme = "README.md"
+authors = [
+    { name = "Qifan Zhang", email = "firefighter-eric@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=11.2.1",
+    "uv>=0.11.3",
+]
+
+[project.scripts]
+rednote_studio = "rednote_studio:main"
+image2jpg = "rednote_studio.scripts.image2jpg:main"
+
+[build-system]
+requires = ["uv_build>=0.9.16,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "rednote_studio"
+module-root = ""
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+    "ruff>=0.11.5",
+]
