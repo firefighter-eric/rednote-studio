@@ -1,0 +1,4 @@
+interface:
+  display_name: "整理食物小志"
+  short_description: "按中文菜名整理食物图片"
+  default_prompt: "把原始食物小志图片按第一张图上的中文菜名分目录整理，并输出连续编号的 JPG 文件。"
