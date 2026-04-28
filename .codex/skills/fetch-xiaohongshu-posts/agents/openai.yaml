@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fetch Xiaohongshu Posts"
+  short_description: "Extract Xiaohongshu posts into content.md."
+  default_prompt: "Fetch Xiaohongshu post details from my logged-in profile page and write matching content.md files."
