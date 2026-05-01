@@ -3,10 +3,13 @@
 把 `data/food_notes/raw` 里的食物小志原图整理成仓库当前使用的目录形态：
 
 ```text
-data/food_notes/<菜名>/1.jpg
-data/food_notes/<菜名>/2.jpg
-data/food_notes/<菜名>/3.jpg
+data/food_notes/items/<菜名>/1.jpg
+data/food_notes/items/<菜名>/2.jpg
+data/food_notes/items/<菜名>/3.jpg
+data/food_notes/items/<菜名>/meta.yaml
 ```
+
+如果能从小红书发帖时间确认可靠日期，可以使用 `data/food_notes/items/<YYYY-MM-DD>_<菜名>/`；不要用 raw EXIF 或本机文件系统时间给目录加日期。
 
 ## 1. 生成缩略图预览
 
@@ -53,7 +56,7 @@ uv add pillow
 ```bash
 uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py check \
   data/food_notes/raw \
-  --base-dir data/food_notes \
+  --base-dir data/food_notes/items \
   --mapping data/food_notes/_preview/mapping.json
 ```
 
@@ -64,7 +67,7 @@ uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py c
 ```bash
 uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py apply \
   data/food_notes/raw \
-  --base-dir data/food_notes \
+  --base-dir data/food_notes/items \
   --mapping data/food_notes/_preview/mapping.json \
   --yes
 ```

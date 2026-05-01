@@ -1,0 +1,60 @@
+schema_version: 1
+title: '芒果糯米饭冰激凌'
+item_date: null
+directory_name: '芒果糯米饭冰激凌'
+content_title: '芒果糯米饭冰激凌，一口东南亚夏天！'
+status: 'ready'
+assets:
+  images:
+    - '1.jpg'
+    - '2.jpg'
+    - '3.jpg'
+  content: 'content.md'
+capture_times:
+  source: 'raw_exif'
+  note: '这些时间来自匹配到的 raw 原图 EXIF DateTime。'
+  images:
+    - file: '1.jpg'
+      raw_file: '41F16C99-F7A4-47B8-B9AE-0FEBCD34D2D4.jpeg'
+      captured_at: '2026-05-01T17:18:11+08:00'
+      match_distance: 2
+    - file: '2.jpg'
+      raw_file: 'C7C17DC4-95AA-4C6F-B74B-50A44BAD8EC0.jpeg'
+      captured_at: '2026-05-01T17:18:15+08:00'
+      match_distance: 0
+    - file: '3.jpg'
+      raw_file: 'B2963F77-1883-4EA5-B46D-EFF7F69D0F13.jpeg'
+      captured_at: '2026-05-01T17:18:18+08:00'
+      match_distance: 0
+file_times:
+  source: 'filesystem'
+  note: '这些时间来自本机文件系统元数据，不等同于原始拍摄时间。'
+  images:
+    - file: '1.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+    - file: '2.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+    - file: '3.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+post_times:
+  source: 'unavailable'
+  note: '尚未抓取到小红书发帖时间；不要用 raw EXIF 或文件系统时间给目录加日期。'
+  notes: []
+engagement:
+  source: 'unavailable'
+  note: '尚未抓取到小红书观看、点赞、收藏数据。'
+  views: null
+  likes: null
+  favorites: null
+source:
+  platform: 'xiaohongshu'
+  url: null
+  note_title: null
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-01'

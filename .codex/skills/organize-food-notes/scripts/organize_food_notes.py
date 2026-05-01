@@ -207,9 +207,10 @@ def generate_sheets(args: argparse.Namespace) -> int:
         print(f"  {path}")
     print("next:")
     print(f"  1. Edit {output_dir / 'mapping.json'}")
+    default_base_dir = raw_dir.parent / "items"
     print(
         "  2. uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py "
-        f"check {raw_dir} --base-dir {raw_dir.parent} --mapping {output_dir / 'mapping.json'}"
+        f"check {raw_dir} --base-dir {default_base_dir} --mapping {output_dir / 'mapping.json'}"
     )
     return 0
 

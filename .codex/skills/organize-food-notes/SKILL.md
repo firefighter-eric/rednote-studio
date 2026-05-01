@@ -1,6 +1,6 @@
 ---
 name: organize-food-notes
-description: 整理“食物小志/食物笔记”类食谱图片：按每组第一张图上醒目的中文菜名建立目录，并输出 1.jpg、2.jpg、3.jpg 这类连续编号文件。适用于 Codex 需要清理 data/food_notes/raw、生成缩略图预览、确认分组映射、保留 raw 原图、把图片复制转换到 data/food_notes/<菜名>/ 时。
+description: 整理“食物小志/食物笔记”类食谱图片：按每组第一张图上醒目的中文菜名建立目录，并输出 1.jpg、2.jpg、3.jpg 这类连续编号文件。适用于 Codex 需要清理 data/food_notes/raw、生成缩略图预览、确认分组映射、保留 raw 原图、把图片复制转换到 data/food_notes/items/<菜名>/，或在有小红书发帖时间时输出到 data/food_notes/items/<YYYY-MM-DD>_<菜名>/ 时。
 ---
 
 # 整理食物小志图片
@@ -10,17 +10,18 @@ description: 整理“食物小志/食物笔记”类食谱图片：按每组第
 把 `data/food_notes/raw` 里的 UUID/相机原始图，按当前仓库的 food notes 样式整理成：
 
 ```text
-data/food_notes/<中文菜名>/1.jpg
-data/food_notes/<中文菜名>/2.jpg
-data/food_notes/<中文菜名>/3.jpg
-data/food_notes/<中文菜名>/content.md
+data/food_notes/items/<中文菜名>/1.jpg
+data/food_notes/items/<中文菜名>/2.jpg
+data/food_notes/items/<中文菜名>/3.jpg
+data/food_notes/items/<中文菜名>/content.md
+data/food_notes/items/<中文菜名>/meta.yaml
 ```
 
 这个 skill 只负责图片整理；除非用户另说，不创建或改写 `content.md`，也不移动、删除 `raw/` 原图。
 
 ## 标准流程
 
-1. 默认把 `data/food_notes/raw` 当作原图目录，把 `data/food_notes` 当作输出根目录。
+1. 默认把 `data/food_notes/raw` 当作原图目录，把 `data/food_notes/items` 当作菜品输出根目录。
 2. 所有 Python 命令都从项目根目录用 `uv run python ...` 执行，不使用系统 `python3`。如果缺少脚本依赖，先安装到 uv 项目环境，例如：
 
 ```bash
@@ -53,7 +54,7 @@ uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py p
 ```bash
 uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py check \
   data/food_notes/raw \
-  --base-dir data/food_notes \
+  --base-dir data/food_notes/items \
   --mapping data/food_notes/_preview/mapping.json
 ```
 
@@ -62,14 +63,16 @@ uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py c
 ```bash
 uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py apply \
   data/food_notes/raw \
-  --base-dir data/food_notes \
+  --base-dir data/food_notes/items \
   --mapping data/food_notes/_preview/mapping.json \
   --yes
 ```
 
 ## 命名和确认规则
 
-- 目录名使用第 1 页上最明显的中文菜名，只做必要的文件系统安全清理。
+- 目录名默认使用中文菜名；只有拿到小红书发帖时间时，才使用 `YYYY-MM-DD_中文菜名`。
+- 不要用 raw EXIF 或本机文件系统时间给目录加日期；raw EXIF 只能写进 `capture_times`，文件系统时间只能写进 `file_times`，都要注明来源。
+- 菜名使用第 1 页上最明显的中文菜名，只做必要的文件系统安全清理。
 - 每组图片顺序就是最终 `1.jpg`、`2.jpg`、`3.jpg` 的顺序。
 - 每张 raw 图片默认应该进入且只进入一个分组；确实不要整理的图片放进 `exclude`。
 - 如果本轮只整理一部分 raw 图片，可以在 `check/apply` 加 `--allow-missing`，并在汇报里说明为什么有缺失编号。
@@ -101,4 +104,4 @@ uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py a
 - 生成的预览目录或写入目录。
 - 整理出的分组数和图片数。
 - `missing_indexes`、`duplicate_indexes` 是否为空；如果不为空，说明原因。
-- 抽查最终目录是否是 `data/food_notes/<菜名>/1.jpg 2.jpg 3.jpg`。
+- 抽查最终目录是否是 `data/food_notes/items/<菜名>/1.jpg 2.jpg 3.jpg`，或在有可靠日期时为 `data/food_notes/items/<YYYY-MM-DD>_<菜名>/1.jpg 2.jpg 3.jpg`。

@@ -1,0 +1,65 @@
+schema_version: 1
+title: '提拉米苏杯'
+item_date: '2026-04-27'
+directory_name: '提拉米苏杯'
+content_title: '提拉米苏杯🍰，一口就沦陷！'
+status: 'ready'
+assets:
+  images:
+    - '1.jpg'
+    - '2.jpg'
+    - '3.jpg'
+  content: 'content.md'
+capture_times:
+  source: 'unavailable'
+  note: '没有可匹配的 raw EXIF 拍摄时间；不要从目录名或文件系统时间推断拍摄日期。'
+  images: []
+file_times:
+  source: 'filesystem'
+  note: '这些时间来自本机文件系统元数据，不等同于原始拍摄时间。'
+  images:
+    - file: '1.jpg'
+      created_at: '2026-04-29T01:15:52+08:00'
+      modified_at: '2026-04-29T01:15:52+08:00'
+    - file: '2.jpg'
+      created_at: '2026-04-29T01:15:52+08:00'
+      modified_at: '2026-04-29T01:15:52+08:00'
+    - file: '3.jpg'
+      created_at: '2026-04-29T01:15:52+08:00'
+      modified_at: '2026-04-29T01:15:52+08:00'
+post_times:
+  source: 'xiaohongshu'
+  note: '这些时间来自小红书帖子发布时间。'
+  notes:
+    - title: '提拉米苏杯🍰，一口就沦陷！'
+      url: 'https://www.xiaohongshu.com/explore/69eee272000000003503003e'
+      note_id: '69eee272000000003503003e'
+      posted_at: '2026-04-27T12:13:38+08:00'
+      ip_location: '上海'
+engagement:
+  source: 'xiaohongshu_public_note_page'
+  note: '这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。'
+  views: null
+  likes: 46
+  favorites: 43
+  comments: 0
+  shares: 6
+  notes:
+    - title: '提拉米苏杯🍰，一口就沦陷！'
+      url: 'https://www.xiaohongshu.com/explore/69eee272000000003503003e'
+      note_id: '69eee272000000003503003e'
+      views: null
+      likes: 46
+      favorites: 43
+      comments: 0
+      shares: 6
+source:
+  platform: 'xiaohongshu'
+  url: 'https://www.xiaohongshu.com/explore/69eee272000000003503003e'
+  note_id: '69eee272000000003503003e'
+  note_title: '提拉米苏杯🍰，一口就沦陷！'
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-01'

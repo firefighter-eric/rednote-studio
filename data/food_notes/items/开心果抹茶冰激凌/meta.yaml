@@ -1,0 +1,60 @@
+schema_version: 1
+title: '开心果抹茶冰激凌'
+item_date: null
+directory_name: '开心果抹茶冰激凌'
+content_title: '开心果抹茶冰激凌，清爽又浓郁！'
+status: 'ready'
+assets:
+  images:
+    - '1.jpg'
+    - '2.jpg'
+    - '3.jpg'
+  content: 'content.md'
+capture_times:
+  source: 'raw_exif'
+  note: '这些时间来自匹配到的 raw 原图 EXIF DateTime。'
+  images:
+    - file: '1.jpg'
+      raw_file: 'EC52AC38-1D61-47F5-9C20-C466A8698748.jpeg'
+      captured_at: '2026-05-01T17:20:00+08:00'
+      match_distance: 0
+    - file: '2.jpg'
+      raw_file: '43150F69-3292-4499-A8B7-079C93981C14.jpeg'
+      captured_at: '2026-05-01T17:20:02+08:00'
+      match_distance: 0
+    - file: '3.jpg'
+      raw_file: 'D4041D24-38ED-4ECD-B551-8A506BD60570.jpeg'
+      captured_at: '2026-05-01T17:20:04+08:00'
+      match_distance: 0
+file_times:
+  source: 'filesystem'
+  note: '这些时间来自本机文件系统元数据，不等同于原始拍摄时间。'
+  images:
+    - file: '1.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+    - file: '2.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+    - file: '3.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+post_times:
+  source: 'unavailable'
+  note: '尚未抓取到小红书发帖时间；不要用 raw EXIF 或文件系统时间给目录加日期。'
+  notes: []
+engagement:
+  source: 'unavailable'
+  note: '尚未抓取到小红书观看、点赞、收藏数据。'
+  views: null
+  likes: null
+  favorites: null
+source:
+  platform: 'xiaohongshu'
+  url: null
+  note_title: null
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-01'

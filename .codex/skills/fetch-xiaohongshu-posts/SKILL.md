@@ -1,6 +1,6 @@
 ---
 name: fetch-xiaohongshu-posts
-description: 从已登录的小红书个人主页抓取帖子详情文字，并写入 data/food_notes 风格目录里的 content.md。适用于 Codex 需要使用用户自己的浏览器登录态、收集笔记详情链接、提取 SSR HTML 中的 desc 字段、把帖子标题映射到本地菜名目录，或把合并帖子拆分到多个本地食物笔记目录时。
+description: 从已登录的小红书个人主页抓取帖子详情文字，并写入 data/food_notes/items/<菜名>/content.md 或 data/food_notes/items/<YYYY-MM-DD>_<菜名>/content.md。适用于 Codex 需要使用用户自己的浏览器登录态、收集笔记详情链接、提取 SSR HTML 中的 desc 字段、把帖子标题映射到本地菜名目录，或把合并帖子拆分到多个本地食物笔记目录时。
 ---
 
 # 抓取小红书帖子正文
@@ -20,7 +20,11 @@ description: 从已登录的小红书个人主页抓取帖子详情文字，并�
 [
   {
     "title": "扬州炒饭，一口就爱上的经典美食！",
-    "url": "https://www.xiaohongshu.com/user/profile/<userId>/<noteId>?xsec_token=...&xsec_source=pc_user"
+    "url": "https://www.xiaohongshu.com/user/profile/<userId>/<noteId>?xsec_token=...&xsec_source=pc_user",
+    "postedAt": "2026-05-01T12:00:00+08:00",
+    "views": 1000,
+    "likes": 88,
+    "favorites": 12
   }
 ]
 ```
@@ -36,7 +40,8 @@ description: 从已登录的小红书个人主页抓取帖子详情文字，并�
 ```
 
 5. 运行 `scripts/write_xhs_content.mjs` 抓取详情页，从 SSR HTML 中提取 `desc` 字段；如果正文里包含 `标题：...` 行，把它拆成 Markdown 标题；然后写入每个映射目录的 `content.md`。
-6. 验证每个写入文件非空，并且以预期标题开头。如果某个帖子没有 `desc`，跳过并汇报。
+6. 如果能从页面或 notes JSON 获取小红书发布时间、观看、点赞、收藏，脚本会写入 `meta.yaml` 的 `post_times` 和 `engagement`。没有明确数据时不要编数字，保持 `null`。
+7. 验证每个写入文件非空，并且以预期标题开头。如果某个帖子没有 `desc`，跳过并汇报。
 
 ## 浏览器链接提取
 
@@ -69,7 +74,7 @@ await fs.writeFile("/tmp/xhs_profile_notes.json", JSON.stringify(notes, null, 2)
 node .codex/skills/fetch-xiaohongshu-posts/scripts/write_xhs_content.mjs \
   --notes /tmp/xhs_profile_notes.json \
   --mapping /tmp/xhs_mapping.json \
-  --base-dir data/food_notes
+  --base-dir data/food_notes/items
 ```
 
 可以加 `--dry-run` 预览将要写入的内容。

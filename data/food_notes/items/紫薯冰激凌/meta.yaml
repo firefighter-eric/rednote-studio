@@ -1,0 +1,60 @@
+schema_version: 1
+title: '紫薯冰激凌'
+item_date: null
+directory_name: '紫薯冰激凌'
+content_title: '紫薯冰激凌，颜色太治愈了！'
+status: 'ready'
+assets:
+  images:
+    - '1.jpg'
+    - '2.jpg'
+    - '3.jpg'
+  content: 'content.md'
+capture_times:
+  source: 'raw_exif'
+  note: '这些时间来自匹配到的 raw 原图 EXIF DateTime。'
+  images:
+    - file: '1.jpg'
+      raw_file: '7BD9CEA7-002E-468A-B51A-58AFD7F0DF69.jpeg'
+      captured_at: '2026-05-01T17:21:32+08:00'
+      match_distance: 0
+    - file: '2.jpg'
+      raw_file: 'DFF18CA9-C16C-440F-AF0E-DB05B7C0C44E.jpeg'
+      captured_at: '2026-05-01T17:21:36+08:00'
+      match_distance: 0
+    - file: '3.jpg'
+      raw_file: '2773BBEA-3C46-417A-B2DC-128C099C02D3.jpeg'
+      captured_at: '2026-05-01T17:21:37+08:00'
+      match_distance: 0
+file_times:
+  source: 'filesystem'
+  note: '这些时间来自本机文件系统元数据，不等同于原始拍摄时间。'
+  images:
+    - file: '1.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+    - file: '2.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+    - file: '3.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+post_times:
+  source: 'unavailable'
+  note: '尚未抓取到小红书发帖时间；不要用 raw EXIF 或文件系统时间给目录加日期。'
+  notes: []
+engagement:
+  source: 'unavailable'
+  note: '尚未抓取到小红书观看、点赞、收藏数据。'
+  views: null
+  likes: null
+  favorites: null
+source:
+  platform: 'xiaohongshu'
+  url: null
+  note_title: null
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-01'

@@ -6,8 +6,18 @@ dist/
 wheels/
 *.egg-info
 .DS_Store
+.playwright-mcp/
 
 # Virtual environments
 .venv
 
-/data
+# Local media and generated outputs are ignored, but food-note metadata is tracked.
+/data/*
+!/data/food_notes/
+/data/food_notes/*
+!/data/food_notes/manifest_*.yaml
+!/data/food_notes/items/
+/data/food_notes/items/*
+!/data/food_notes/items/*/
+/data/food_notes/items/*/*
+!/data/food_notes/items/*/meta.yaml

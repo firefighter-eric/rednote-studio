@@ -55,14 +55,20 @@ uv run ruff check <path>
 - 稳定输出形态是：
 
 ```text
-data/food_notes/<菜名>/1.jpg
-data/food_notes/<菜名>/2.jpg
-data/food_notes/<菜名>/3.jpg
-data/food_notes/<菜名>/content.md
+data/food_notes/items/<菜名>/1.jpg
+data/food_notes/items/<菜名>/2.jpg
+data/food_notes/items/<菜名>/3.jpg
+data/food_notes/items/<菜名>/content.md
+data/food_notes/items/<菜名>/meta.yaml
 ```
 
 - 图片整理流程应保留 `raw/` 原图，先生成预览，再确认映射，最后才写入连续编号 JPG。
-- 抓取小红书帖子正文到现有 `data/food_notes/<菜名>/content.md` 时使用 `.codex/skills/fetch-xiaohongshu-posts/`。
+- 菜目录日期前缀只使用小红书发帖时间：拿到可靠 `post_times.source: xiaohongshu` 后，目录名前可以加 `YYYY-MM-DD_`。不要用 raw EXIF 或文件系统时间给目录加日期。
+- 抓取小红书帖子正文到现有 `data/food_notes/items/<菜名>/content.md` 或 `data/food_notes/items/<YYYY-MM-DD>_<菜名>/content.md` 时使用 `.codex/skills/fetch-xiaohongshu-posts/`。
+- 每个菜目录可以包含 `meta.yaml`，用于记录机器可读的单菜信息：`title`、`content_title`、`item_date`、`directory_name`、`status`、`assets`、`post_times`、`engagement`、`capture_times`、`file_times`、`source`、`tags`、`notes` 和初始化日期。`content.md` 继续作为面向人的正文。
+- `engagement` 记录小红书观看、点赞、收藏，字段使用 `views`、`likes`、`favorites`；只有页面或 notes JSON 明确抓到数据时才填数字，否则保持 `null` 并标记 `source: unavailable`。
+- `file_times` 记录本机文件系统创建/修改时间时，必须注明来源是 `filesystem`，并说明它不等同于原始拍摄时间；只有存在 EXIF 拍摄时间时，才可记录为拍摄时间。
+- `data/food_notes/manifest_YYYY-MM-DD.yaml` 是某一天的状态快照，用于汇总每个菜目录、完成状态、发帖时间状态和辅助时间来源；manifest 可以被仓库追踪。
 
 ## 编辑规则
 

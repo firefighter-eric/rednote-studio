@@ -1,0 +1,77 @@
+schema_version: 1
+title: '云南过桥米线（家常版）'
+item_date: '2026-05-01'
+directory_name: '云南过桥米线（家常版）'
+content_title: '一碗云南过桥米线的攻略'
+status: 'ready'
+assets:
+  images:
+    - '1.jpg'
+    - '2.jpg'
+    - '3.jpg'
+  content: 'content.md'
+capture_times:
+  source: 'raw_exif'
+  note: '这些时间来自匹配到的 raw 原图 EXIF DateTime。'
+  images:
+    - file: '1.jpg'
+      raw_file: '19F7DBD5-7E8E-42D0-8EBB-097F6A38D2FC.jpeg'
+      captured_at: '2026-04-30T00:32:44+08:00'
+      match_distance: 0
+    - file: '2.jpg'
+      raw_file: '8E34AA04-EA87-4DC8-AA07-6C625CA14090.jpeg'
+      captured_at: '2026-04-30T00:32:44+08:00'
+      match_distance: 0
+    - file: '3.jpg'
+      raw_file: '3EDFEE11-F2D3-4435-B446-7B77797577B7.jpeg'
+      captured_at: '2026-04-30T00:32:44+08:00'
+      match_distance: 0
+file_times:
+  source: 'filesystem'
+  note: '这些时间来自本机文件系统元数据，不等同于原始拍摄时间。'
+  images:
+    - file: '1.jpg'
+      created_at: '2026-05-01T21:37:16+08:00'
+      modified_at: '2026-05-01T21:37:16+08:00'
+    - file: '2.jpg'
+      created_at: '2026-05-01T21:37:16+08:00'
+      modified_at: '2026-05-01T21:37:16+08:00'
+    - file: '3.jpg'
+      created_at: '2026-05-01T21:37:16+08:00'
+      modified_at: '2026-05-01T21:37:16+08:00'
+post_times:
+  source: 'xiaohongshu'
+  note: '这些时间来自小红书帖子发布时间。'
+  notes:
+    - title: '一碗云南过桥米线的攻略'
+      url: 'https://www.xiaohongshu.com/explore/69f426510000000035030693'
+      note_id: '69f426510000000035030693'
+      posted_at: '2026-05-01T12:04:33+08:00'
+      ip_location: '上海'
+engagement:
+  source: 'xiaohongshu_public_note_page'
+  note: '这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。'
+  views: null
+  likes: 10
+  favorites: 10
+  comments: 0
+  shares: 2
+  notes:
+    - title: '一碗云南过桥米线的攻略'
+      url: 'https://www.xiaohongshu.com/explore/69f426510000000035030693'
+      note_id: '69f426510000000035030693'
+      views: null
+      likes: 10
+      favorites: 10
+      comments: 0
+      shares: 2
+source:
+  platform: 'xiaohongshu'
+  url: 'https://www.xiaohongshu.com/explore/69f426510000000035030693'
+  note_id: '69f426510000000035030693'
+  note_title: '一碗云南过桥米线的攻略'
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-01'

@@ -1,0 +1,77 @@
+schema_version: 1
+title: '焦糖芝士泡芙'
+item_date: '2026-04-29'
+directory_name: '焦糖芝士泡芙'
+content_title: '焦糖芝士泡芙，一口就爱上！'
+status: 'ready'
+assets:
+  images:
+    - '1.jpg'
+    - '2.jpg'
+    - '3.jpg'
+  content: 'content.md'
+capture_times:
+  source: 'raw_exif'
+  note: '这些时间来自匹配到的 raw 原图 EXIF DateTime。'
+  images:
+    - file: '1.jpg'
+      raw_file: '2A4B4ECE-9461-46FB-811D-6D1CA783DA39.jpeg'
+      captured_at: '2026-04-29T21:18:07+08:00'
+      match_distance: 0
+    - file: '2.jpg'
+      raw_file: '73E1A4C6-4B14-4528-8E4B-BE099D7CD024.jpeg'
+      captured_at: '2026-04-29T21:18:21+08:00'
+      match_distance: 8
+    - file: '3.jpg'
+      raw_file: 'CB3B9331-DFE6-4F2C-857A-50B9824F570C.jpeg'
+      captured_at: '2026-04-29T21:18:21+08:00'
+      match_distance: 0
+file_times:
+  source: 'filesystem'
+  note: '这些时间来自本机文件系统元数据，不等同于原始拍摄时间。'
+  images:
+    - file: '1.jpg'
+      created_at: '2026-05-01T21:37:16+08:00'
+      modified_at: '2026-05-01T21:37:16+08:00'
+    - file: '2.jpg'
+      created_at: '2026-05-01T21:37:16+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+    - file: '3.jpg'
+      created_at: '2026-05-01T21:37:17+08:00'
+      modified_at: '2026-05-01T21:37:17+08:00'
+post_times:
+  source: 'xiaohongshu'
+  note: '这些时间来自小红书帖子发布时间。'
+  notes:
+    - title: '焦糖芝士泡芙，一口就爱上！'
+      url: 'https://www.xiaohongshu.com/explore/69f20a3600000000350313e0'
+      note_id: '69f20a3600000000350313e0'
+      posted_at: '2026-04-29T21:40:06+08:00'
+      ip_location: '上海'
+engagement:
+  source: 'xiaohongshu_public_note_page'
+  note: '这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。'
+  views: null
+  likes: 9
+  favorites: 17
+  comments: 0
+  shares: 1
+  notes:
+    - title: '焦糖芝士泡芙，一口就爱上！'
+      url: 'https://www.xiaohongshu.com/explore/69f20a3600000000350313e0'
+      note_id: '69f20a3600000000350313e0'
+      views: null
+      likes: 9
+      favorites: 17
+      comments: 0
+      shares: 1
+source:
+  platform: 'xiaohongshu'
+  url: 'https://www.xiaohongshu.com/explore/69f20a3600000000350313e0'
+  note_id: '69f20a3600000000350313e0'
+  note_title: '焦糖芝士泡芙，一口就爱上！'
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-01'

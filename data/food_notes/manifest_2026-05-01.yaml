@@ -1,0 +1,740 @@
+schema_version: 1
+snapshot_date: '2026-05-01'
+snapshot_label: 2026-05-01 food_notes 状态
+base_dir: data/food_notes/items
+summary:
+  total_items: 34
+  ready_items: 34
+  complete_assets: 34
+  with_xiaohongshu_post_time: 28
+  without_xiaohongshu_post_time: 6
+  with_xiaohongshu_engagement: 28
+  without_xiaohongshu_engagement: 6
+  with_raw_exif_capture_time: 15
+time_policy:
+  directory_date_source: xiaohongshu_post_time_only
+  note: item_date 只记录小红书帖子发布时间；raw EXIF 和文件系统时间只作辅助记录，不作为目录日期。
+engagement_policy:
+  source: xiaohongshu_public_note_page
+  fields:
+  - views
+  - likes
+  - favorites
+  - comments
+  - shares
+  note: 点赞、收藏、评论、分享来自小红书公开笔记详情页；公开页未提供观看/浏览量时 views 保持 null。
+items:
+- dir: 云南过桥米线
+  title: 云南过桥米线
+  item_date: '2026-04-30'
+  status: ready
+  content_title: 热汤鲜香云南过桥米线 🍜
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-30T12:18:36+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 9
+    favorites: 5
+    comments: 0
+    shares: 1
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T01:07:56+08:00'
+- dir: 云南过桥米线（家常版）
+  title: 云南过桥米线（家常版）
+  item_date: '2026-05-01'
+  status: ready
+  content_title: 一碗云南过桥米线的攻略
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-05-01T12:04:33+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 10
+    favorites: 10
+    comments: 0
+    shares: 2
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-04-30T00:32:44+08:00'
+- dir: 咖喱鸡饭
+  title: 咖喱鸡饭
+  item_date: '2026-05-01'
+  status: ready
+  content_title: 🍛一锅“拿下”咖喱鸡饭！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-05-01T10:50:34+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 14
+    favorites: 14
+    comments: 0
+    shares: 0
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T01:04:29+08:00'
+- dir: 巴斯克蛋糕
+  title: 巴斯克蛋糕
+  item_date: '2026-04-27'
+  status: ready
+  content_title: 焦香流心的巴斯克蛋糕，焦糖控不能错过！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-27T12:41:06+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 10
+    favorites: 12
+    comments: 0
+    shares: 1
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 开心果抹茶冰激凌
+  title: 开心果抹茶冰激凌
+  item_date: null
+  status: ready
+  content_title: 开心果抹茶冰激凌，清爽又浓郁！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: unavailable
+    posted_at: null
+  engagement:
+    source: unavailable
+    views: null
+    likes: null
+    favorites: null
+    comments: null
+    shares: null
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T17:20:00+08:00'
+- dir: 开心果椰子水
+  title: 开心果椰子水
+  item_date: null
+  status: ready
+  content_title: 开心果椰子水，清爽到像在度假！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: unavailable
+    posted_at: null
+  engagement:
+    source: unavailable
+    views: null
+    likes: null
+    favorites: null
+    comments: null
+    shares: null
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-04-29T21:18:27+08:00'
+- dir: 开心果草莓瑞士卷
+  title: 开心果草莓瑞士卷
+  item_date: '2026-04-29'
+  status: ready
+  content_title: 🍓开心果草莓瑞士卷，一口就爱上了！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-29T12:36:02+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 5
+    favorites: 7
+    comments: 0
+    shares: 1
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-04-29T12:11:23+08:00'
+- dir: 懒人版草莓大福
+  title: 懒人版草莓大福
+  item_date: '2026-04-26'
+  status: ready
+  content_title: 懒人版草莓大福🍓，轻松搞定草莓控
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-26T12:59:40+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 9
+    favorites: 11
+    comments: 0
+    shares: 0
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 扬州炒饭
+  title: 扬州炒饭
+  item_date: '2026-04-28'
+  status: ready
+  content_title: 扬州炒饭，一口就爱上的经典美食！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-28T22:03:11+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 13
+    favorites: 8
+    comments: 0
+    shares: 1
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 抹茶慕斯蛋糕
+  title: 抹茶慕斯蛋糕
+  item_date: '2026-04-26'
+  status: ready
+  content_title: 抹茶慕斯蛋糕🍰，抹茶控不能错过！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-26T15:50:39+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 29
+    favorites: 44
+    comments: 0
+    shares: 6
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 抹茶麻薯冰激凌
+  title: 抹茶麻薯冰激凌
+  item_date: '2026-05-01'
+  status: ready
+  content_title: 是谁还没吃到抹茶麻薯冰激凌？
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-05-01T00:07:25+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 18
+    favorites: 18
+    comments: 0
+    shares: 7
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T00:05:27+08:00'
+- dir: 提拉米苏杯
+  title: 提拉米苏杯
+  item_date: '2026-04-27'
+  status: ready
+  content_title: 提拉米苏杯🍰，一口就沦陷！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-27T12:13:38+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 46
+    favorites: 43
+    comments: 0
+    shares: 6
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 日式照烧三文鱼饭
+  title: 日式照烧三文鱼饭
+  item_date: '2026-04-27'
+  status: ready
+  content_title: 日式照烧三文鱼饭🍣，一口惊艳！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-27T22:06:13+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 1
+    favorites: 2
+    comments: 3
+    shares: 2
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 桂花酒酿小圆子
+  title: 桂花酒酿小圆子
+  item_date: '2026-04-29'
+  status: ready
+  content_title: 养生小甜汤合集！！！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-29T12:13:18+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 9
+    favorites: 8
+    comments: 2
+    shares: 0
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-04-29T12:10:42+08:00'
+- dir: 沙威玛
+  title: 沙威玛
+  item_date: '2026-04-26'
+  status: ready
+  content_title: 外焦里嫩沙威玛卷
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-26T19:38:15+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 16
+    favorites: 25
+    comments: 0
+    shares: 5
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 泰奶布丁
+  title: 泰奶布丁
+  item_date: '2026-04-27'
+  status: ready
+  content_title: 泰奶布丁🍮，一口就爱上的甜品！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-27T09:56:59+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 15
+    favorites: 16
+    comments: 0
+    shares: 2
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 泰式冬阴功青口贝
+  title: 泰式冬阴功青口贝
+  item_date: '2026-04-25'
+  status: ready
+  content_title: 谁还没吃到泰式冬阴功青贝？
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-25T11:24:08+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 20
+    favorites: 23
+    comments: 0
+    shares: 7
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 泰式青柠蒜香锡纸烤鱼
+  title: 泰式青柠蒜香锡纸烤鱼
+  item_date: '2026-04-26'
+  status: ready
+  content_title: 泰式青柠蒜香锡纸烤鱼，一口爆汁！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-26T12:19:44+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 12
+    favorites: 9
+    comments: 0
+    shares: 3
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 海鲜星洲炒米粉
+  title: 海鲜星洲炒米粉
+  item_date: '2026-04-28'
+  status: ready
+  content_title: 鲜香入味的海鲜星洲炒米粉，一口就爱上了！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-28T10:41:23+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 6
+    favorites: 11
+    comments: 0
+    shares: 0
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 焦糖芝士泡芙
+  title: 焦糖芝士泡芙
+  item_date: '2026-04-29'
+  status: ready
+  content_title: 焦糖芝士泡芙，一口就爱上！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-29T21:40:06+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 9
+    favorites: 17
+    comments: 0
+    shares: 1
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-04-29T21:18:07+08:00'
+- dir: 照烧鸡腿饭
+  title: 照烧鸡腿饭
+  item_date: '2026-04-28'
+  status: ready
+  content_title: 照烧鸡腿饭🍗，一口就爱上！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-28T12:42:52+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 7
+    favorites: 9
+    comments: 0
+    shares: 0
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 猪脚饭
+  title: 猪脚饭
+  item_date: '2026-04-28'
+  status: ready
+  content_title: 😋猪脚饭，一口就爱上的美味！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-28T22:01:30+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 39
+    favorites: 55
+    comments: 0
+    shares: 7
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 珍珠奶茶
+  title: 珍珠奶茶
+  item_date: '2026-04-30'
+  status: ready
+  content_title: 自制珍珠奶茶太香了！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-30T10:07:21+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 5
+    favorites: 7
+    comments: 0
+    shares: 0
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-04-29T21:38:13+08:00'
+- dir: 番茄牛腩面
+  title: 番茄牛腩面
+  item_date: '2026-04-24'
+  status: ready
+  content_title: 番茄牛腩面，酸甜暖胃！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-24T20:35:55+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 17
+    favorites: 12
+    comments: 0
+    shares: 2
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 紫薯冰激凌
+  title: 紫薯冰激凌
+  item_date: null
+  status: ready
+  content_title: 紫薯冰激凌，颜色太治愈了！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: unavailable
+    posted_at: null
+  engagement:
+    source: unavailable
+    views: null
+    likes: null
+    favorites: null
+    comments: null
+    shares: null
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T17:21:32+08:00'
+- dir: 纸杯蛋糕
+  title: 纸杯蛋糕
+  item_date: null
+  status: ready
+  content_title: 纸杯蛋糕🧁，简单可爱又好吃！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: unavailable
+    posted_at: null
+  engagement:
+    source: unavailable
+    views: null
+    likes: null
+    favorites: null
+    comments: null
+    shares: null
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T17:01:48+08:00'
+- dir: 芒果糯米饭冰激凌
+  title: 芒果糯米饭冰激凌
+  item_date: null
+  status: ready
+  content_title: 芒果糯米饭冰激凌，一口东南亚夏天！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: unavailable
+    posted_at: null
+  engagement:
+    source: unavailable
+    views: null
+    likes: null
+    favorites: null
+    comments: null
+    shares: null
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T17:18:11+08:00'
+- dir: 草莓大福
+  title: 草莓大福
+  item_date: '2026-04-26'
+  status: ready
+  content_title: 软糯爆汁的草莓大福，在家也能做🍓
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-26T12:22:40+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 28
+    favorites: 18
+    comments: 3
+    shares: 2
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 草莓麻薯冰激凌
+  title: 草莓麻薯冰激凌
+  item_date: null
+  status: ready
+  content_title: 草莓麻薯冰激凌，糯叽叽草莓控必试！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: unavailable
+    posted_at: null
+  engagement:
+    source: unavailable
+    views: null
+    likes: null
+    favorites: null
+    comments: null
+    shares: null
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T17:19:03+08:00'
+- dir: 蒜蓉粉丝蒸小青龙
+  title: 蒜蓉粉丝蒸小青龙
+  item_date: '2026-04-25'
+  status: ready
+  content_title: 被蒜蓉蒸小青龙🦞硬控了！
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-25T09:34:55+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 9
+    favorites: 9
+    comments: 1
+    shares: 2
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 蒜蓉粉丝虾
+  title: 蒜蓉粉丝虾
+  item_date: '2026-04-25'
+  status: ready
+  content_title: 蒜香封神的粉丝虾🦐
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-25T12:36:52+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 4
+    favorites: 8
+    comments: 0
+    shares: 0
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 蒜香帕玛森脆炸薯条
+  title: 蒜香帕玛森脆炸薯条
+  item_date: '2026-04-26'
+  status: ready
+  content_title: 🍟：蒜香帕玛森脆脆炸薯条🥄
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-26T10:49:19+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 14
+    favorites: 20
+    comments: 0
+    shares: 1
+  capture_times:
+    source: unavailable
+    first_captured_at: null
+- dir: 迪拜巧克力开心果冰激凌
+  title: 迪拜巧克力开心果冰激凌
+  item_date: '2026-05-01'
+  status: ready
+  content_title: 迪拜巧克力开心果冰激凌🍦
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-05-01T15:35:10+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 7
+    favorites: 8
+    comments: 0
+    shares: 5
+  capture_times:
+    source: raw_exif
+    first_captured_at: '2026-05-01T15:34:02+08:00'
+- dir: 韩式蜂蜜辣酱炸鸡翅
+  title: 韩式蜂蜜辣酱炸鸡翅
+  item_date: '2026-04-25'
+  status: ready
+  content_title: 香迷糊：韩式蜂蜜辣酱炸鸡翅🔥
+  images: 3
+  has_content: true
+  has_meta: true
+  post_times:
+    source: xiaohongshu
+    posted_at: '2026-04-25T14:47:33+08:00'
+  engagement:
+    source: xiaohongshu_public_note_page
+    views: null
+    likes: 18
+    favorites: 17
+    comments: 0
+    shares: 1
+  capture_times:
+    source: unavailable
+    first_captured_at: null
