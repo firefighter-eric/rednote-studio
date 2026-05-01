@@ -9,14 +9,14 @@
 - 图片素材整理
 - 视频渲染与导出
 
-## Quick Start
+## 快速开始
 
 ```bash
 uv sync
 uv run rednote_studio --help
 ```
 
-## Project Layout
+## 项目结构
 
 ```text
 .
@@ -26,14 +26,14 @@ uv run rednote_studio --help
 └── README.md
 ```
 
-## Common Commands
+## 常用命令
 
 ```bash
 uv run rednote_studio info
 uv run rednote_studio init-workspace
 ```
 
-## Next Steps
+## 后续方向
 
 你后面可以继续往这个项目里加：
 

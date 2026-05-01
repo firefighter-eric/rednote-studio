@@ -1,72 +1,104 @@
 ---
 name: organize-food-notes
-description: 整理“食物小志/食物笔记”类食谱图片：按每组第一张图上醒目的中文菜名建立目录，并输出 1.jpg、2.jpg、3.jpg 这类连续编号文件。适用于 Codex 需要清理 data/food_notes 或类似 raw 食物图片素材、保留 raw 原图、生成缩略图联系表辅助视觉分组，或把一批食谱长图整理成稳定的中文菜名目录时。
+description: 整理“食物小志/食物笔记”类食谱图片：按每组第一张图上醒目的中文菜名建立目录，并输出 1.jpg、2.jpg、3.jpg 这类连续编号文件。适用于 Codex 需要清理 data/food_notes/raw、生成缩略图预览、确认分组映射、保留 raw 原图、把图片复制转换到 data/food_notes/<菜名>/ 时。
 ---
 
 # 整理食物小志图片
 
 ## 目标
 
-把原始食物笔记/食谱长图整理成易读的素材目录：
+把 `data/food_notes/raw` 里的 UUID/相机原始图，按当前仓库的 food notes 样式整理成：
 
 ```text
 data/food_notes/<中文菜名>/1.jpg
 data/food_notes/<中文菜名>/2.jpg
 data/food_notes/<中文菜名>/3.jpg
+data/food_notes/<中文菜名>/content.md
 ```
 
-除非用户明确要求移动或删除原图，否则保留 `raw/` 里的 UUID/相机原始文件名。
+这个 skill 只负责图片整理；除非用户另说，不创建或改写 `content.md`，也不移动、删除 `raw/` 原图。
 
-## 工作流
+## 标准流程
 
-1. 检查目标目录。优先把 `data/food_notes/raw` 当作原图来源；只有在存在多个可能的原图目录且无法判断时才询问用户。
-2. 用 `scripts/organize_food_notes.py sheets ...` 生成缩略图联系表。
-3. 根据视觉内容把图片按同一道菜/同一组食谱分组。目录名使用第 1 页上最明显的中文大标题。
-4. 创建一个 JSON 映射表，把中文菜名映射到排序后的图片编号或文件名。
-5. 用 `scripts/organize_food_notes.py organize ...` 复制并转换图片，输出为连续编号的 JPG。
-6. 验证每张支持格式的原图都进入且只进入一个分组，除非用户明确要求排除某些图片。
-
-## 命名规则
-
-- 图片上有清晰中文标题时，使用中文目录名。
-- 优先使用第一张图上的原始标题，只做必要的文件系统安全清理。
-- 保留自然顺序：封面/介绍页在前，做法页在中间，营养/环境/收尾页在后。
-- 遇到重复页时，只有明显不同或用户要求全部保留时才都放入整理目录。
-- 每个菜名目录里使用 `1.jpg`、`2.jpg` 等文件名，不保留 UUID 文件名。
-- 默认不改动 `raw/`。
-
-## 脚本用法
-
-生成视觉索引联系表：
+1. 默认把 `data/food_notes/raw` 当作原图目录，把 `data/food_notes` 当作输出根目录。
+2. 所有 Python 命令都从项目根目录用 `uv run python ...` 执行，不使用系统 `python3`。如果缺少脚本依赖，先安装到 uv 项目环境，例如：
 
 ```bash
-python3 .codex/skills/organize-food-notes/scripts/organize_food_notes.py sheets \
-  data/food_notes/raw \
-  --output-dir /tmp/food_notes_sheets
+uv add pillow
 ```
 
-创建映射 JSON：
+3. 先运行 `preview`，生成缩略图联系表、索引和 `mapping.json`：
+
+```bash
+uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py preview \
+  data/food_notes/raw \
+  --output-dir data/food_notes/_preview
+```
+
+4. 查看 `data/food_notes/_preview/preview.html` 或 `sheet_*.jpg`。每张图左下角有编号，编号对应 `index.md` / `index.json`。
+5. 编辑 `data/food_notes/_preview/mapping.json`，把同一道菜的图片按输出顺序填到 `groups` 里：
+
+```json
+{
+  "groups": {
+    "番茄牛腩面": [2, 8, 19],
+    "沙威玛": ["0A39FDA2-0624-441F-9F8C-D569CF6264D6.jpeg", 12, 31]
+  },
+  "exclude": []
+}
+```
+
+6. 先确认分组计划，不落盘：
+
+```bash
+uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py check \
+  data/food_notes/raw \
+  --base-dir data/food_notes \
+  --mapping data/food_notes/_preview/mapping.json
+```
+
+7. `missing_indexes` 和 `duplicate_indexes` 都符合预期后，再写入编号 JPG：
+
+```bash
+uv run python .codex/skills/organize-food-notes/scripts/organize_food_notes.py apply \
+  data/food_notes/raw \
+  --base-dir data/food_notes \
+  --mapping data/food_notes/_preview/mapping.json \
+  --yes
+```
+
+## 命名和确认规则
+
+- 目录名使用第 1 页上最明显的中文菜名，只做必要的文件系统安全清理。
+- 每组图片顺序就是最终 `1.jpg`、`2.jpg`、`3.jpg` 的顺序。
+- 每张 raw 图片默认应该进入且只进入一个分组；确实不要整理的图片放进 `exclude`。
+- 如果本轮只整理一部分 raw 图片，可以在 `check/apply` 加 `--allow-missing`，并在汇报里说明为什么有缺失编号。
+- 目标文件已存在时默认停止；需要重跑覆盖时加 `--overwrite`。
+- `apply` 不带 `--yes` 时只做 dry run，不写文件。
+
+## 兼容旧用法
+
+脚本保留了旧命令别名：
+
+- `sheets` 等同于 `preview`
+- `confirm` / `plan` 等同于 `check`
+- `organize` 等同于 `apply`
+
+旧版的顶层映射格式仍可用：
 
 ```json
 {
   "沙威玛": [3, 52, 44],
-  "番茄牛腩面": [2, 8, 19]
+  "番茄牛腩面": [2, 8, 19],
+  "__exclude__": [7]
 }
 ```
 
-编号来自脚本打印的原图排序列表，也会显示在联系表上。映射表里也可以直接使用文件名。
+## 汇报要求
 
-在保留原图的同时，整理输出为连续编号 JPG：
+完成后向用户汇报：
 
-```bash
-python3 .codex/skills/organize-food-notes/scripts/organize_food_notes.py organize \
-  data/food_notes/raw \
-  --base-dir data/food_notes \
-  --mapping /tmp/food_notes_mapping.json
-```
-
-## 验证
-
-- 汇报整理出的分组数和图片数。
-- 确认 `missing_indexes` 为空，除非有刻意排除的图片。
-- 抽查生成后的目录列表和每个目录里的编号文件。
+- 生成的预览目录或写入目录。
+- 整理出的分组数和图片数。
+- `missing_indexes`、`duplicate_indexes` 是否为空；如果不为空，说明原因。
+- 抽查最终目录是否是 `data/food_notes/<菜名>/1.jpg 2.jpg 3.jpg`。
