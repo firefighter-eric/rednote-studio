@@ -1,9 +1,9 @@
 ---
 name: fetch-xiaohongshu-posts
-description: 从已登录的小红书个人主页抓取帖子详情文字，并写入 data/food_notes/items/<菜名>/content.md 或 data/food_notes/items/<YYYY-MM-DD>_<菜名>/content.md。适用于 Codex 需要使用用户自己的浏览器登录态、收集笔记详情链接、提取 SSR HTML 中的 desc 字段、把帖子标题映射到本地菜名目录，或把合并帖子拆分到多个本地食物笔记目录时。
+description: 从已登录的小红书个人主页或公开笔记详情页抓取 food_notes 对应帖子的正文、发帖时间、IP 属地、点赞、收藏、评论、分享等社交媒体信息，写入 data/food_notes/items/<菜名>/content.md 与 meta.yaml，并刷新 data/food_notes/manifest_<日期>.yaml。适用于 Codex 需要把本地菜名目录映射到小红书帖子、补齐内容和互动数据、确认公开页没有观看量字段时保持 views:null，或更新 food_notes manifest 状态时。
 ---
 
-# 抓取小红书帖子正文
+# 抓取小红书帖子内容与社交数据
 
 ## 工作流
 
@@ -39,9 +39,18 @@ description: 从已登录的小红书个人主页抓取帖子详情文字，并�
 }
 ```
 
-5. 运行 `scripts/write_xhs_content.mjs` 抓取详情页，从 SSR HTML 中提取 `desc` 字段；如果正文里包含 `标题：...` 行，把它拆成 Markdown 标题；然后写入每个映射目录的 `content.md`。
-6. 如果能从页面或 notes JSON 获取小红书发布时间、观看、点赞、收藏，脚本会写入 `meta.yaml` 的 `post_times` 和 `engagement`。没有明确数据时不要编数字，保持 `null`。
-7. 验证每个写入文件非空，并且以预期标题开头。如果某个帖子没有 `desc`，跳过并汇报。
+5. 运行 `scripts/write_xhs_content.mjs` 写入正文、meta 和 manifest。脚本优先使用 notes JSON 里已经从浏览器页面提取的 `desc/postedAt/likes/favorites/comments/shares`；缺字段时会再尝试抓公开 SSR HTML。
+6. `meta.yaml` 必须记录：
+   - `post_times.source: xiaohongshu`
+   - `post_times.notes[].posted_at`
+   - `post_times.notes[].note_id`
+   - `post_times.notes[].ip_location`
+   - `engagement.source`
+   - `engagement.views/likes/favorites/comments/shares`
+   - `source.platform/url/note_id/note_title`
+7. 小红书公开详情页通常没有观看/浏览量字段。没有明确 `views/viewCount/readCount` 时，不要猜，保持 `views: null`，并在 note 里说明公开页未提供。
+8. 每次补齐一批帖子后，刷新 `data/food_notes/manifest_<日期>.yaml`。manifest 里的 `with_xiaohongshu_post_time`、`with_xiaohongshu_engagement`、`ready_items`、`complete_assets` 要和当前目录状态一致。
+9. 验证每个写入文件非空、`meta.yaml` 和 manifest 能被 YAML 解析。如果某个帖子没有 `desc`，跳过并汇报。
 
 ## 浏览器链接提取
 
@@ -66,6 +75,31 @@ await fs.writeFile("/tmp/xhs_profile_notes.json", JSON.stringify(notes, null, 2)
 
 如果个人主页只显示第一批笔记，滚动页面后重复提取，再按 URL 去重。
 
+## 详情页数据提取
+
+逐个打开候选帖子详情页，用页面里的 `window.__INITIAL_STATE__.note.noteDetailMap[<noteId>].note` 提取稳定字段。推荐保存成 `/tmp/xhs_profile_notes.json`，格式如下：
+
+```json
+[
+  {
+    "title": "在家复刻新加坡风味海鲜面🍜🌴鲜辣椰香一口",
+    "url": "https://www.xiaohongshu.com/explore/<noteId>?xsec_token=...",
+    "noteId": "<noteId>",
+    "desc": "帖子正文...",
+    "postedAt": 1776918143000,
+    "lastUpdatedAt": 1776934729000,
+    "ipLocation": "上海",
+    "views": null,
+    "likes": "119",
+    "favorites": "153",
+    "comments": "11",
+    "shares": "21"
+  }
+]
+```
+
+如果详情页字段和卡片标题不一致，以详情页里的 `note.title` 为准；如果候选链接和本地菜名明显串了，回个人主页继续搜索标题关键词，不要落盘错误映射。
+
 ## 脚本用法
 
 从仓库根目录运行：
@@ -74,12 +108,28 @@ await fs.writeFile("/tmp/xhs_profile_notes.json", JSON.stringify(notes, null, 2)
 node .codex/skills/fetch-xiaohongshu-posts/scripts/write_xhs_content.mjs \
   --notes /tmp/xhs_profile_notes.json \
   --mapping /tmp/xhs_mapping.json \
-  --base-dir data/food_notes/items
+  --base-dir data/food_notes/items \
+  --update-manifest 2026-05-02
 ```
 
 可以加 `--dry-run` 预览将要写入的内容。
 
+默认保持现有目录名，只把小红书发帖日期写进 `item_date` 和 `post_times`。只有用户明确要按发帖日期给目录加前缀时，才加 `--date-prefix`，输出到 `YYYY-MM-DD_<菜名>/`。
+
 脚本支持把多个标题写入同一个目录，中间用 `---` 分隔；但如果图片本身已经拆成不同组，优先使用独立目录。拆分图片组时，先移动或重命名图片，让每个目录都有 `1.jpg`、`2.jpg`、`3.jpg`，再把每个目录映射到一个帖子标题。
+
+## 验证命令
+
+```bash
+node --check .codex/skills/fetch-xiaohongshu-posts/scripts/write_xhs_content.mjs
+uv run python - <<'PY'
+from pathlib import Path
+import yaml
+for p in [*Path('data/food_notes').glob('manifest_*.yaml'), *Path('data/food_notes/items').glob('*/meta.yaml')]:
+    yaml.safe_load(p.read_text())
+print('yaml ok')
+PY
+```
 
 ## 安全规则
 

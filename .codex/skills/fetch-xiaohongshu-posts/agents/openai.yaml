@@ -1,4 +1,4 @@
 interface:
-  display_name: "Fetch Xiaohongshu Posts"
-  short_description: "Extract Xiaohongshu posts into content.md."
-  default_prompt: "Fetch Xiaohongshu post details from my logged-in profile page and write matching content.md files."
+  display_name: "抓取小红书食物笔记"
+  short_description: "抓取小红书正文、发帖时间和互动数据，并更新 food_notes manifest。"
+  default_prompt: "从我已登录的小红书主页抓取这些菜对应帖子的正文、发帖时间、点赞、收藏、评论和分享，写入 food_notes 的 content.md/meta.yaml，并更新 manifest。"

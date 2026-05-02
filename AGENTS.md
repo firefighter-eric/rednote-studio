@@ -64,7 +64,8 @@ data/food_notes/items/<菜名>/meta.yaml
 
 - 图片整理流程应保留 `raw/` 原图，先生成预览，再确认映射，最后才写入连续编号 JPG。
 - 菜目录日期前缀只使用小红书发帖时间：拿到可靠 `post_times.source: xiaohongshu` 后，目录名前可以加 `YYYY-MM-DD_`。不要用 raw EXIF 或文件系统时间给目录加日期。
-- 抓取小红书帖子正文到现有 `data/food_notes/items/<菜名>/content.md` 或 `data/food_notes/items/<YYYY-MM-DD>_<菜名>/content.md` 时使用 `.codex/skills/fetch-xiaohongshu-posts/`。
+- `.codex/skills/fetch-xiaohongshu-posts/` 涉及读取小红书页面和账号可见数据，可能触及小红书平台协议或自动化访问限制。除非用户明确要求“使用/运行/抓取小红书 skill”或明确要求从小红书补正文、发帖时间、点赞、评论、收藏等数据，否则不得主动启用该 skill，也不得把它作为默认补全步骤。
+- 用户明确要求使用该 skill 时，只读取用户指定或用户账号可见的页面信息；不得代替用户登录、扫码、输入验证码、点赞、评论、发布、删除、上传或修改账号设置。
 - 每个菜目录可以包含 `meta.yaml`，用于记录机器可读的单菜信息：`title`、`content_title`、`item_date`、`directory_name`、`status`、`assets`、`post_times`、`engagement`、`capture_times`、`file_times`、`source`、`tags`、`notes` 和初始化日期。`content.md` 继续作为面向人的正文。
 - `engagement` 记录小红书观看、点赞、收藏，字段使用 `views`、`likes`、`favorites`；只有页面或 notes JSON 明确抓到数据时才填数字，否则保持 `null` 并标记 `source: unavailable`。
 - `file_times` 记录本机文件系统创建/修改时间时，必须注明来源是 `filesystem`，并说明它不等同于原始拍摄时间；只有存在 EXIF 拍摄时间时，才可记录为拍摄时间。
