@@ -1,0 +1,78 @@
+schema_version: 1
+title: 杨枝甘露
+item_date: '2026-04-23'
+directory_name: 杨枝甘露
+content_title: 在家复刻杨枝甘露，清爽又高级
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: 1643A683-6703-4704-9D8A-5F1604A4EB21.jpeg
+    captured_at: '2026-04-23T19:13:44+08:00'
+  - file: 2.jpg
+    raw_file: 93A22616-6892-4D9D-AD42-6DE00FDB91BA.jpeg
+    captured_at: '2026-04-23T19:13:44+08:00'
+  - file: 3.jpg
+    raw_file: A1BC13BB-2B80-4056-9B93-AAA2DD69C44C.jpeg
+    captured_at: '2026-04-23T19:13:52+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: 1643A683-6703-4704-9D8A-5F1604A4EB21.jpeg
+    created_at: '2026-04-23T19:13:44+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 2.jpg
+    raw_file: 93A22616-6892-4D9D-AD42-6DE00FDB91BA.jpeg
+    created_at: '2026-04-23T19:13:44+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: A1BC13BB-2B80-4056-9B93-AAA2DD69C44C.jpeg
+    created_at: '2026-04-23T19:13:52+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 在家复刻杨枝甘露，清爽又高级
+    url: https://www.xiaohongshu.com/explore/69e9ffb60000000019025c02
+    note_id: 69e9ffb60000000019025c02
+    posted_at: '2026-04-23T19:17:10+08:00'
+    last_updated_at: '2026-04-23T19:17:11+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 47
+  favorites: 43
+  comments: 0
+  shares: 7
+  notes:
+  - title: 在家复刻杨枝甘露，清爽又高级
+    url: https://www.xiaohongshu.com/explore/69e9ffb60000000019025c02
+    note_id: 69e9ffb60000000019025c02
+    views: null
+    likes: 47
+    favorites: 43
+    comments: 0
+    shares: 7
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69e9ffb60000000019025c02
+  note_id: 69e9ffb60000000019025c02
+  note_title: 在家复刻杨枝甘露，清爽又高级
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

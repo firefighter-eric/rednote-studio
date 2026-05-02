@@ -1,0 +1,78 @@
+schema_version: 1
+title: 咖喱乌冬面
+item_date: '2026-04-24'
+directory_name: 咖喱乌冬面
+content_title: 怎么会有这么好吃的咖喱乌冬面🍜
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: 63AEF405-09F6-408C-B247-B619A69D8FAE.jpeg
+    captured_at: '2026-04-24T12:51:34+08:00'
+  - file: 2.jpg
+    raw_file: 71D1607F-0B80-4172-97C8-8F112F0C4349.jpeg
+    captured_at: '2026-04-24T12:51:37+08:00'
+  - file: 3.jpg
+    raw_file: 979E968E-4878-47EC-A46B-CC3579364495.jpeg
+    captured_at: '2026-04-24T12:51:50+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: 63AEF405-09F6-408C-B247-B619A69D8FAE.jpeg
+    created_at: '2026-04-24T12:51:34+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 2.jpg
+    raw_file: 71D1607F-0B80-4172-97C8-8F112F0C4349.jpeg
+    created_at: '2026-04-24T12:51:37+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: 979E968E-4878-47EC-A46B-CC3579364495.jpeg
+    created_at: '2026-04-24T12:51:50+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 怎么会有这么好吃的咖喱乌冬面🍜
+    url: https://www.xiaohongshu.com/explore/69eaf7360000000013030806
+    note_id: 69eaf7360000000013030806
+    posted_at: '2026-04-24T12:53:11+08:00'
+    last_updated_at: '2026-04-24T12:53:11+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 38
+  favorites: 38
+  comments: 0
+  shares: 4
+  notes:
+  - title: 怎么会有这么好吃的咖喱乌冬面🍜
+    url: https://www.xiaohongshu.com/explore/69eaf7360000000013030806
+    note_id: 69eaf7360000000013030806
+    views: null
+    likes: 38
+    favorites: 38
+    comments: 0
+    shares: 4
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69eaf7360000000013030806
+  note_id: 69eaf7360000000013030806
+  note_title: 怎么会有这么好吃的咖喱乌冬面🍜
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

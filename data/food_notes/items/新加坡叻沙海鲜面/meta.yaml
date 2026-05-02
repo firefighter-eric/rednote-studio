@@ -1,0 +1,78 @@
+schema_version: 1
+title: 新加坡叻沙海鲜面
+item_date: '2026-04-23'
+directory_name: 新加坡叻沙海鲜面
+content_title: 在家复刻新加坡风味海鲜面🍜🌴鲜辣椰香一口
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: 80F1E199-3AA3-4E18-89D3-5812E5DF9023.jpeg
+    captured_at: '2026-04-23T10:55:33+08:00'
+  - file: 2.jpg
+    raw_file: 84CA2594-6A2A-4D24-A06F-23D4BA6EBDDD.jpeg
+    captured_at: '2026-04-23T10:55:36+08:00'
+  - file: 3.jpg
+    raw_file: 4F2B142A-A02A-41C9-935A-DE6FF0FF7410.jpeg
+    captured_at: '2026-04-23T10:55:40+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: 80F1E199-3AA3-4E18-89D3-5812E5DF9023.jpeg
+    created_at: '2026-04-23T10:55:33+08:00'
+    modified_at: '2026-05-02T00:58:21+08:00'
+  - file: 2.jpg
+    raw_file: 84CA2594-6A2A-4D24-A06F-23D4BA6EBDDD.jpeg
+    created_at: '2026-04-23T10:55:36+08:00'
+    modified_at: '2026-05-02T00:58:21+08:00'
+  - file: 3.jpg
+    raw_file: 4F2B142A-A02A-41C9-935A-DE6FF0FF7410.jpeg
+    created_at: '2026-04-23T10:55:40+08:00'
+    modified_at: '2026-05-02T00:58:21+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 在家复刻新加坡风味海鲜面🍜🌴鲜辣椰香一口
+    url: https://www.xiaohongshu.com/explore/69e99e7f00000000210056ea
+    note_id: 69e99e7f00000000210056ea
+    posted_at: '2026-04-23T12:22:23+08:00'
+    last_updated_at: '2026-04-23T16:58:49+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 119
+  favorites: 153
+  comments: 11
+  shares: 21
+  notes:
+  - title: 在家复刻新加坡风味海鲜面🍜🌴鲜辣椰香一口
+    url: https://www.xiaohongshu.com/explore/69e99e7f00000000210056ea
+    note_id: 69e99e7f00000000210056ea
+    views: null
+    likes: 119
+    favorites: 153
+    comments: 11
+    shares: 21
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69e99e7f00000000210056ea
+  note_id: 69e99e7f00000000210056ea
+  note_title: 在家复刻新加坡风味海鲜面🍜🌴鲜辣椰香一口
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

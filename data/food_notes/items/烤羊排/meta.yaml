@@ -1,0 +1,78 @@
+schema_version: 1
+title: 烤羊排
+item_date: '2026-04-24'
+directory_name: 烤羊排
+content_title: 蒜香迷迭香烤羊排，外焦里嫩真的太香了
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: 8B174FF2-C80A-4F60-B7C4-C8898919A2A0.jpeg
+    captured_at: '2026-04-24T10:03:37+08:00'
+  - file: 2.jpg
+    raw_file: 3B51648A-CED8-4B06-9FA4-5B049FF33F59.jpeg
+    captured_at: '2026-04-24T10:03:37+08:00'
+  - file: 3.jpg
+    raw_file: A653A7DA-1B3B-4798-A3F8-008B624AC657.jpeg
+    captured_at: '2026-04-24T10:03:37+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: 8B174FF2-C80A-4F60-B7C4-C8898919A2A0.jpeg
+    created_at: '2026-04-24T10:03:37+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 2.jpg
+    raw_file: 3B51648A-CED8-4B06-9FA4-5B049FF33F59.jpeg
+    created_at: '2026-04-24T10:03:37+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: A653A7DA-1B3B-4798-A3F8-008B624AC657.jpeg
+    created_at: '2026-04-24T10:03:37+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 蒜香迷迭香烤羊排，外焦里嫩真的太香了
+    url: https://www.xiaohongshu.com/explore/69ead0090000000013030800
+    note_id: 69ead0090000000013030800
+    posted_at: '2026-04-24T10:06:01+08:00'
+    last_updated_at: '2026-04-24T10:06:01+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 13
+  favorites: 17
+  comments: 0
+  shares: 1
+  notes:
+  - title: 蒜香迷迭香烤羊排，外焦里嫩真的太香了
+    url: https://www.xiaohongshu.com/explore/69ead0090000000013030800
+    note_id: 69ead0090000000013030800
+    views: null
+    likes: 13
+    favorites: 17
+    comments: 0
+    shares: 1
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69ead0090000000013030800
+  note_id: 69ead0090000000013030800
+  note_title: 蒜香迷迭香烤羊排，外焦里嫩真的太香了
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

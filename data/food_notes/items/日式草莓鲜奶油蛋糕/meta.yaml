@@ -1,0 +1,78 @@
+schema_version: 1
+title: 日式草莓鲜奶油蛋糕
+item_date: '2026-04-23'
+directory_name: 日式草莓鲜奶油蛋糕
+content_title: 草莓和奶油，真的配一脸🍓
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: 6FE0A35E-6B0B-46BF-B380-6025D44300D4.jpeg
+    captured_at: '2026-04-23T18:07:03+08:00'
+  - file: 2.jpg
+    raw_file: 82BD05D3-8B77-4A7B-B863-7292404DCD84.jpeg
+    captured_at: '2026-04-23T18:07:04+08:00'
+  - file: 3.jpg
+    raw_file: 023CA789-9552-45A8-A36F-5D6CE2E2EAB7.jpeg
+    captured_at: '2026-04-23T18:07:04+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: 6FE0A35E-6B0B-46BF-B380-6025D44300D4.jpeg
+    created_at: '2026-04-23T18:07:03+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 2.jpg
+    raw_file: 82BD05D3-8B77-4A7B-B863-7292404DCD84.jpeg
+    created_at: '2026-04-23T18:07:04+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: 023CA789-9552-45A8-A36F-5D6CE2E2EAB7.jpeg
+    created_at: '2026-04-23T18:07:04+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 草莓和奶油，真的配一脸🍓
+    url: https://www.xiaohongshu.com/explore/69e9f0d8000000001901e002
+    note_id: 69e9f0d8000000001901e002
+    posted_at: '2026-04-23T18:13:44+08:00'
+    last_updated_at: '2026-04-23T18:14:14+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 84
+  favorites: 72
+  comments: 1
+  shares: 7
+  notes:
+  - title: 草莓和奶油，真的配一脸🍓
+    url: https://www.xiaohongshu.com/explore/69e9f0d8000000001901e002
+    note_id: 69e9f0d8000000001901e002
+    views: null
+    likes: 84
+    favorites: 72
+    comments: 1
+    shares: 7
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69e9f0d8000000001901e002
+  note_id: 69e9f0d8000000001901e002
+  note_title: 草莓和奶油，真的配一脸🍓
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

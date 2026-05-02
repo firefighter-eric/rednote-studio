@@ -1,0 +1,78 @@
+schema_version: 1
+title: 蒜香黄油煎牛排
+item_date: '2026-04-23'
+directory_name: 蒜香黄油煎牛排
+content_title: 在家煎牛排，真的能做出餐厅感🥩
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: B709C9A8-9CF1-4A66-A704-73D3A079934C.jpeg
+    captured_at: '2026-04-23T19:13:55+08:00'
+  - file: 2.jpg
+    raw_file: 5FB62896-FF10-4255-BD72-BD5CB37C0043.jpeg
+    captured_at: '2026-04-23T19:14:02+08:00'
+  - file: 3.jpg
+    raw_file: A446ED0A-F3BB-41F4-881A-E6FC967B76AA.jpeg
+    captured_at: '2026-04-23T19:14:21+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: B709C9A8-9CF1-4A66-A704-73D3A079934C.jpeg
+    created_at: '2026-04-23T19:13:55+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 2.jpg
+    raw_file: 5FB62896-FF10-4255-BD72-BD5CB37C0043.jpeg
+    created_at: '2026-04-23T19:14:02+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: A446ED0A-F3BB-41F4-881A-E6FC967B76AA.jpeg
+    created_at: '2026-04-23T19:14:21+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 在家煎牛排，真的能做出餐厅感🥩
+    url: https://www.xiaohongshu.com/explore/69ea278a0000000012012802
+    note_id: 69ea278a0000000012012802
+    posted_at: '2026-04-23T22:07:06+08:00'
+    last_updated_at: '2026-04-23T22:09:18+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 12
+  favorites: 19
+  comments: 1
+  shares: 4
+  notes:
+  - title: 在家煎牛排，真的能做出餐厅感🥩
+    url: https://www.xiaohongshu.com/explore/69ea278a0000000012012802
+    note_id: 69ea278a0000000012012802
+    views: null
+    likes: 12
+    favorites: 19
+    comments: 1
+    shares: 4
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69ea278a0000000012012802
+  note_id: 69ea278a0000000012012802
+  note_title: 在家煎牛排，真的能做出餐厅感🥩
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

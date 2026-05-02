@@ -1,0 +1,78 @@
+schema_version: 1
+title: 黄焖鸡
+item_date: '2026-04-23'
+directory_name: 黄焖鸡
+content_title: 黄焖鸡这样做，真的香到要多吃两碗饭🍗🍚
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: B984A8E0-66BC-42FC-99A2-AB38709A70AE.jpeg
+    captured_at: '2026-04-23T12:44:44+08:00'
+  - file: 2.jpg
+    raw_file: FCBDBDEA-AC44-4F7B-A802-20B0280F8D20.jpeg
+    captured_at: '2026-04-23T12:44:44+08:00'
+  - file: 3.jpg
+    raw_file: FFB8A500-2AEA-4031-80F0-A11B5A70DBC4.jpeg
+    captured_at: '2026-04-23T12:44:44+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: B984A8E0-66BC-42FC-99A2-AB38709A70AE.jpeg
+    created_at: '2026-04-23T12:44:44+08:00'
+    modified_at: '2026-05-02T00:58:21+08:00'
+  - file: 2.jpg
+    raw_file: FCBDBDEA-AC44-4F7B-A802-20B0280F8D20.jpeg
+    created_at: '2026-04-23T12:44:44+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: FFB8A500-2AEA-4031-80F0-A11B5A70DBC4.jpeg
+    created_at: '2026-04-23T12:44:44+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 黄焖鸡这样做，真的香到要多吃两碗饭🍗🍚
+    url: https://www.xiaohongshu.com/explore/69e9a4e7000000001d01b1c7
+    note_id: 69e9a4e7000000001d01b1c7
+    posted_at: '2026-04-23T12:49:43+08:00'
+    last_updated_at: '2026-04-23T16:58:30+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 18
+  favorites: 21
+  comments: 5
+  shares: 6
+  notes:
+  - title: 黄焖鸡这样做，真的香到要多吃两碗饭🍗🍚
+    url: https://www.xiaohongshu.com/explore/69e9a4e7000000001d01b1c7
+    note_id: 69e9a4e7000000001d01b1c7
+    views: null
+    likes: 18
+    favorites: 21
+    comments: 5
+    shares: 6
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69e9a4e7000000001d01b1c7
+  note_id: 69e9a4e7000000001d01b1c7
+  note_title: 黄焖鸡这样做，真的香到要多吃两碗饭🍗🍚
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

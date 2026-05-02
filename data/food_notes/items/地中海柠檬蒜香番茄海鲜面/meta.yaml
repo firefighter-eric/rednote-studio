@@ -1,0 +1,78 @@
+schema_version: 1
+title: 地中海柠檬蒜香番茄海鲜面
+item_date: '2026-04-24'
+directory_name: 地中海柠檬蒜香番茄海鲜面
+content_title: 这碗海鲜面真的有餐厅感，25分钟就能搞定！
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: E7258948-B31B-473D-B723-8828E65509D1.jpeg
+    captured_at: '2026-04-24T17:51:43+08:00'
+  - file: 2.jpg
+    raw_file: 0321175F-115C-413D-BCBF-9E5D9343C411.jpeg
+    captured_at: '2026-04-24T17:51:46+08:00'
+  - file: 3.jpg
+    raw_file: A3CC04B0-A156-45C4-AD27-4395A92F764F.jpeg
+    captured_at: '2026-04-24T17:51:50+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: E7258948-B31B-473D-B723-8828E65509D1.jpeg
+    created_at: '2026-04-24T17:51:43+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 2.jpg
+    raw_file: 0321175F-115C-413D-BCBF-9E5D9343C411.jpeg
+    created_at: '2026-04-24T17:51:46+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: A3CC04B0-A156-45C4-AD27-4395A92F764F.jpeg
+    created_at: '2026-04-24T17:51:50+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 这碗海鲜面真的有餐厅感，25分钟就能搞定！
+    url: https://www.xiaohongshu.com/explore/69eb3e230000000019032406
+    note_id: 69eb3e230000000019032406
+    posted_at: '2026-04-24T17:55:47+08:00'
+    last_updated_at: '2026-04-24T17:55:48+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 23
+  favorites: 23
+  comments: 0
+  shares: 2
+  notes:
+  - title: 这碗海鲜面真的有餐厅感，25分钟就能搞定！
+    url: https://www.xiaohongshu.com/explore/69eb3e230000000019032406
+    note_id: 69eb3e230000000019032406
+    views: null
+    likes: 23
+    favorites: 23
+    comments: 0
+    shares: 2
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69eb3e230000000019032406
+  note_id: 69eb3e230000000019032406
+  note_title: 这碗海鲜面真的有餐厅感，25分钟就能搞定！
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'

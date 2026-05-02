@@ -1,0 +1,78 @@
+schema_version: 1
+title: 葡式蛋挞
+item_date: '2026-04-23'
+directory_name: 葡式蛋挞
+content_title: 一口爆浆！在家复刻酥到掉渣的葡式蛋挞
+status: ready
+assets:
+  images:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  content: content.md
+capture_times:
+  source: raw_exif
+  note: 这些时间来自匹配到的 raw 原图 EXIF DateTime；不作为目录日期。
+  images:
+  - file: 1.jpg
+    raw_file: FBDB190E-0FF7-4449-9D7C-E3A0E748CCF7.jpeg
+    captured_at: '2026-04-23T22:17:58+08:00'
+  - file: 2.jpg
+    raw_file: F6F5F836-B10A-4336-AF71-975D433A6712.jpeg
+    captured_at: '2026-04-23T22:17:58+08:00'
+  - file: 3.jpg
+    raw_file: CA60A45B-7EE2-41FA-BFC4-9639CA6CEC78.jpeg
+    captured_at: '2026-04-23T22:17:59+08:00'
+file_times:
+  source: filesystem
+  note: 这些时间来自本机文件系统元数据，不等同于原始拍摄时间。
+  images:
+  - file: 1.jpg
+    raw_file: FBDB190E-0FF7-4449-9D7C-E3A0E748CCF7.jpeg
+    created_at: '2026-04-23T22:17:58+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 2.jpg
+    raw_file: F6F5F836-B10A-4336-AF71-975D433A6712.jpeg
+    created_at: '2026-04-23T22:17:58+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+  - file: 3.jpg
+    raw_file: CA60A45B-7EE2-41FA-BFC4-9639CA6CEC78.jpeg
+    created_at: '2026-04-23T22:17:59+08:00'
+    modified_at: '2026-05-02T00:58:22+08:00'
+post_times:
+  source: xiaohongshu
+  note: 这些时间来自小红书帖子发布时间。
+  notes:
+  - title: 一口爆浆！在家复刻酥到掉渣的葡式蛋挞
+    url: https://www.xiaohongshu.com/explore/69ea2aa20000000019025c08
+    note_id: 69ea2aa20000000019025c08
+    posted_at: '2026-04-23T22:20:18+08:00'
+    last_updated_at: '2026-04-23T22:20:18+08:00'
+    ip_location: 上海
+engagement:
+  source: xiaohongshu_public_note_page
+  note: 这些数据来自小红书公开笔记详情页；公开页未提供观看/浏览量。
+  views: null
+  likes: 12
+  favorites: 14
+  comments: 0
+  shares: 1
+  notes:
+  - title: 一口爆浆！在家复刻酥到掉渣的葡式蛋挞
+    url: https://www.xiaohongshu.com/explore/69ea2aa20000000019025c08
+    note_id: 69ea2aa20000000019025c08
+    views: null
+    likes: 12
+    favorites: 14
+    comments: 0
+    shares: 1
+source:
+  platform: xiaohongshu
+  url: https://www.xiaohongshu.com/explore/69ea2aa20000000019025c08
+  note_id: 69ea2aa20000000019025c08
+  note_title: 一口爆浆！在家复刻酥到掉渣的葡式蛋挞
+tags: []
+notes:
+  health: null
+  environment: null
+meta_initialized_at: '2026-05-02'
